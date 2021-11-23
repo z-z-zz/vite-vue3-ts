@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "types": ["element-plus/global"],
+    "baseUrl":".",
+    "paths":{
+      "@/*": ["src/*"]
+    },
+    "suppressImplicitAnyIndexErrors": true, // 解决用字符串做下标的报错,
+    "skipLibCheck": true, // 解决打包报错 vu-tsc --noEmit && vite build,忽略所有的声明文件 *.d.ts 的类型检查
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules"], // ts 排除的文件
+}
